@@ -94,18 +94,21 @@ TensorFlowで遊ぶ
 [TensorFlowチュートリアル - 画像認識（翻訳）](http://qiita.com/KojiOhki/items/dab6922b6cd7b990c002)  
 ImageNet導入は公式訳の方が分かりやすい.  
   
-imageNetのclassify_image.pyを実行する際に,ソースの入ったフォルダまで移動するところで,  
+ImageNetのclassify_image.pyを実行する際に,ソースの入ったフォルダまで移動するところで,  
 >cd ~/tensorflow/lib/python2.7/site-packages/tensorflow/models/image/imagenet/
   
-とあるが, 実際には  
+と説明しているサイトもあるが, 実際には  
 >cd ~/tensorflow/tensorflow/models/image/imagenet/
   
-となる.  
+となる(公式チュートリアルでは後者).  
 フォルダの構造が変わったのか, 実行環境の違いなのかは不明.  
   
 任意の画像を指定する場合は, ファイルをどこに置けばいい？  
 絶対パスやURLで指定してもエラーが出るので相対パスで指定したいが, そもそもDockerコンテナのディレクトリとは.  
 ->上記「Docker/ホスト(Windows)とコンテナでファイルを共有する」を参照.  
+  
+[TensorFlowでアニメゆるゆりの制作会社を識別する](http://kivantium.hateblo.jp/entry/2015/11/18/233834)  
+TensorFlowの使い方解説 + 画像認識の実装(ソース付き).  
   
 ベイズ分類
 --
