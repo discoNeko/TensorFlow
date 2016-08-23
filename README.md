@@ -10,18 +10,19 @@ TensorFlowのメモ
   
 導入
 --
-[WindowsユーザーがTensorFlowをインストールしてみた(Docker版)](http://yaju3d.hatenablog.jp/entry/2016/04/07/011033)
-  
+[WindowsユーザーがTensorFlowをインストールしてみた(Docker版)](http://yaju3d.hatenablog.jp/entry/2016/04/07/011033)  
 Mac,Linux環境ではVirtualEnvからのインストールが公式推奨  
   
 起動
 --
 [TensorFlowをMac & Dockerで使ってみたよ](http://qiita.com/yanosen_jp/items/41938cc361c9e7c83acc)  
 Mac向けの記事だが、Dockerについて詳しい.  
+[TensorFlowを触ってみたよ！](http://www.slideshare.net/satoshinoda792/tensorflow-56455816)  
+TensorBoardのポートについて説明がある(スライド:6,7).  
 [[TensorFlow][Docker] TensorFlowをWindowsで動かす](http://scriptlife.hacca.jp/contents/programming/2016/08/11/post-1698/)  
-主にここを見ながら導入した.
+主にここを見た.
   
-・Dockerをインストール.  
+・Dockerをインストール(「導入」を参照).  
 ・Docker Quickstart Terminalのアイコンをクリックして起動.  
 ・Dockerコンソール上で,TensorFlowのdockerイメージを起動する.
 >docker run -it b.gcr.io/tensorflow/tensorflow:latest-devel 
@@ -32,7 +33,7 @@ Mac向けの記事だが、Dockerについて詳しい.
 ・pythonを起動. 
 >root@hogehoge:~# python
    
-・pythonコマンドでTensolflowの動作確認 
+・pythonコマンドでTensolflowの動作確認.  
 ・
 
 Docker
@@ -47,6 +48,16 @@ Docker
 >例えば、「C:\Users\tmp」を「/root/share」に共有するときは以下のようにします。
 >>$ docker run -v /c/Users/tmp:/root/share -it b.gcr.io/tensorflow/tensorflow:latest-devel
   
+例えば下記のように実行するとclassify_image.pyが実行できなくなるので注意.  
+>docker run -v /c/Users/share:/tensorflow/tensorflow/models/image/imagenet/ -it b.gcr.io/tensorflow/tensorflow:latest-devel
+  
+これは「/tensorflow/tensorflow/models/image/imagenet/」が「/c/Users/share」として扱われ,   本来「/tensorflow/tensorflow/models/image/imagenet/」内にあるはずのclassify_image.pyが認識されなくなるため.  
+  
+適当な共有用のフォルダを指定しておけば問題ない.  
+>docker run -v /c/Users/share:/tensorflow/tensorflow/models/image/imagenet/share/ -it b.gcr.io/tensorflow/tensorflow:latest-devel
+  
+--image_fileのあとに相対パスで画像を指定する.
+>python classify_image.py --image_file ./share/1.jpg
   
 ### Dockerコマンド
 >docker ps -a  
@@ -80,7 +91,7 @@ TensorFlowで遊ぶ
 --
 [Googleの機械学習フレームワーク「TensorFlow」でImageNetの学習データを使った画像認識を試してみた - TensorFlowのインストールから画像認識まで](http://qiita.com/nkjm/items/a2dada74d48b29f0e5f4)  
 丁寧なImageNet導入・実行の解説. 手軽に画像分類で遊べるようになる. 取りあえず動かしてみたい人向け.  
-[TensorFlowチュートリアル - 画像認識（翻訳）](http://qiita.com/KojiOhki/items/dab6922b6cd7b990c002)
+[TensorFlowチュートリアル - 画像認識（翻訳）](http://qiita.com/KojiOhki/items/dab6922b6cd7b990c002)  
 ImageNet導入は公式訳の方が分かりやすい.  
   
 imageNetのclassify_image.pyを実行する際に,ソースの入ったフォルダまで移動するところで,  
@@ -92,8 +103,8 @@ imageNetのclassify_image.pyを実行する際に,ソースの入ったフォル
 となる.  
 フォルダの構造が変わったのか, 実行環境の違いなのかは不明.  
   
-どこにも書かれていないが任意の画像を指定する場合は、ファイルをどこに置けばいい？  
-絶対パスやURLで指定してもエラーが出るので, 相対パスで指定したいが, そもそもDockerコンテナのディレクトリはあるのか.  
+任意の画像を指定する場合は, ファイルをどこに置けばいい？  
+絶対パスやURLで指定してもエラーが出るので相対パスで指定したいが, そもそもDockerコンテナのディレクトリとは.  
 ->上記「Docker/ホスト(Windows)とコンテナでファイルを共有する」を参照.  
   
 ベイズ分類
