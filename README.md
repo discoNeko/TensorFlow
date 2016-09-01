@@ -101,9 +101,9 @@ input_dataの保存されているディレクトリが変わったようで,URL
 となっている箇所を公式チュートリアル通り
 >from tensorflow.examples.tutorials.mnist import input_data
   
-と直せば実行できた.
+と直せば実行できた.  
 なおDocker(Win)環境では,ダウンロードしたinput_dataのディレクトリの設定に問題があるためかエラーが起こる.  
-Jupyter(iPython Notebook)を起動し,Pythonコードを直接入力した場合は問題なく実行できた.
+Jupyter(iPython Notebook)を起動し,Pythonコードを直接入力した場合は問題なく実行できた.  
 Docker共有フォルダ内のpythonファイルから直接実行したいので解決策を模索中...  
   
 [Googleの機械学習フレームワーク「TensorFlow」でImageNetの学習データを使った画像認識を試してみた - TensorFlowのインストールから画像認識まで](http://qiita.com/nkjm/items/a2dada74d48b29f0e5f4)  
