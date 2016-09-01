@@ -90,12 +90,15 @@ NN構築(テキストのベクトル化)
 TensorFlowで遊ぶ
 --
 ### MNIST
+[TensorFlowで手書きの数字を認識するチュートリアルを試した](http://tech.mof-mof.co.jp/blog/tensorflow-tutorial.html)  
+掲載ソースそのままで実行できる.  
+  
 [TensorFlow チュートリアルMNIST For Beginnersを試してみる](http://www.trifields.jp/try-tutorial-mnist-for-ml-beginners-of-tensorflow-1713)  
 ~2015年くらいの古いコードで試すとエラーを吐かれた.  
 >(OSError: [Errno 71] Protocol error: 'input_data')  
   
 input_dataの保存されているディレクトリが変わったようで, URLに直接アクセスすると403ページが出る.  
-上記サイトのコードで,
+上記サイトのコードでは,
 >import input_data
   
 となっている箇所を, 公式チュートリアル通り
