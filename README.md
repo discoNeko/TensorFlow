@@ -94,18 +94,19 @@ TensorFlowで遊ぶ
 ~2015年くらいの古いコードで試すとエラーを吐かれた.  
 >(OSError: [Errno 71] Protocol error: 'input_data')  
   
-input_dataの保存されているディレクトリが変わったようで,URLに直接アクセスすると403ページが出る.  
+input_dataの保存されているディレクトリが変わったようで, URLに直接アクセスすると403ページが出る.  
 上記サイトのコードで,
 >import input_data
   
-となっている箇所を公式チュートリアル通り
+となっている箇所を, 公式チュートリアル通り
 >from tensorflow.examples.tutorials.mnist import input_data
   
 と直せば実行できた.  
-なおDocker(Win)環境では,ダウンロードしたinput_dataのディレクトリの設定に問題があるためかエラーが起こる.  
-Jupyter(iPython Notebook)を起動し,Pythonコードを直接入力した場合は問題なく実行できた.  
+なおDocker(Win)環境では, ダウンロードしたinput_dataのディレクトリの設定に問題があるためかエラーが起こる.  
+Jupyter(iPython Notebook)を起動し, Pythonコードを直接入力した場合は問題なく実行できた.  
 Docker共有フォルダ内のpythonファイルから直接実行したいので解決策を模索中...  
   
+### ImageNet
 [Googleの機械学習フレームワーク「TensorFlow」でImageNetの学習データを使った画像認識を試してみた - TensorFlowのインストールから画像認識まで](http://qiita.com/nkjm/items/a2dada74d48b29f0e5f4)  
 丁寧なImageNet導入・実行の解説. 手軽に画像分類で遊べるようになる. 取りあえず動かしてみたい人向け.  
 [TensorFlowチュートリアル - 画像認識（翻訳）](http://qiita.com/KojiOhki/items/dab6922b6cd7b990c002)  
