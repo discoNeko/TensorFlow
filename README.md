@@ -89,6 +89,23 @@ NN構築(テキストのベクトル化)
   
 TensorFlowで遊ぶ
 --
+### MNIST
+[TensorFlow チュートリアルMNIST For Beginnersを試してみる](http://www.trifields.jp/try-tutorial-mnist-for-ml-beginners-of-tensorflow-1713)  
+~2015年くらいの古いコードで試すとエラーを吐かれた.  
+>(OSError: [Errno 71] Protocol error: 'input_data')  
+  
+input_dataの保存されているディレクトリが変わったようで,URLに直接アクセスすると403ページが出る.  
+上記サイトのコードで,
+>import input_data
+  
+となっている箇所を公式チュートリアル通り
+>from tensorflow.examples.tutorials.mnist import input_data
+  
+と直せば実行できた.
+なおDocker(Win)環境では,ダウンロードしたinput_dataのディレクトリの設定に問題があるためかエラーが起こる.  
+Jupyter(iPython Notebook)を起動し,Pythonコードを直接入力した場合は問題なく実行できた.
+Docker共有フォルダ内のpythonファイルから直接実行したいので解決策を模索中...  
+  
 [Googleの機械学習フレームワーク「TensorFlow」でImageNetの学習データを使った画像認識を試してみた - TensorFlowのインストールから画像認識まで](http://qiita.com/nkjm/items/a2dada74d48b29f0e5f4)  
 丁寧なImageNet導入・実行の解説. 手軽に画像分類で遊べるようになる. 取りあえず動かしてみたい人向け.  
 [TensorFlowチュートリアル - 画像認識（翻訳）](http://qiita.com/KojiOhki/items/dab6922b6cd7b990c002)  
@@ -120,6 +137,13 @@ TensorFlowの使い方解説 + 画像認識の実装(ソース付き).
 [自然言語処理×ナイーブベイズ分類器で羽生さんと羽生くんを分類してみた](http://qiita.com/tmnck/items/175787ed94ae3eb62616)  
 [ナイーブベイズを用いたテキスト分類](http://aidiary.hatenablog.com/entry/20100613/1276389337)  
 ざっくりと用語解説 + python実装ソース.  
+  
+公式訳
+--
+[TensorFlowチュートリアル - 画像認識（翻訳）](http://qiita.com/KojiOhki/items/dab6922b6cd7b990c002)  
+[TensorFlowチュートリアル - ML初心者のためのMNIST（翻訳）](http://qiita.com/KojiOhki/items/ff6ae04d6cf02f1b6edf)  
+[TensorFlowチュートリアル - 熟練者のためのディープMNIST（翻訳）](http://qiita.com/KojiOhki/items/64a2ee54214b01a411c7)  
+
   
 その他
 --
