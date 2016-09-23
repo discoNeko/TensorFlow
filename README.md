@@ -74,11 +74,16 @@ Docker
 [TensorFlowのチュートリアルを通して、人工知能の原理について学習する](http://qiita.com/jintaka1989/items/3b70b5c5541620536fa2)  
 
   
-NN構築(TensorFlow)
+実装(TensorFlow)
 --
-[TensorFlowチュートリアル - 畳み込みニューラルネットワーク（翻訳）](http://qiita.com/KojiOhki/items/e218f36840df10ae358d)  
-  
-NN構築(テキストのベクトル化)
+* [TensorFlowチュートリアル - 畳み込みニューラルネットワーク（翻訳）](http://qiita.com/KojiOhki/items/e218f36840df10ae358d)  
+* [ニューラルネットワークでプロ野球選手の給与を査定してみる](http://qiita.com/sergeant-wizard/items/9bb45c0850aebca2bc07)  
+入力データの取り込み方から出力までを具体例で解説
+* [TensorFlowのPythonコードの初歩を噛み砕いてみる](http://qiita.com/To_Murakami/items/5984a4891597b17fc40e)  
+上の記事のソース解説
+
+
+実装(テキストのベクトル化)
 --
 [TensorFlowを使ってテキストをクラス分類してみた](http://www.slideshare.net/YuyaKato3/tensorflow-58795721)  
 ある文字列を特徴化して, 入力用のベクトルに直す方法が使えそう？  
