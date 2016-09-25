@@ -24,11 +24,11 @@ TensorBoardのポートについて説明がある(スライド:6,7).
 ・Dockerコンソール上で,TensorFlowのdockerイメージを起動する.
 >docker run -it b.gcr.io/tensorflow/tensorflow:latest-devel 
   
-・起動に成功すると以下のように表示される.
->root@hogehoge:~#  
+・起動に成功すると以下のように表示される.  
+`root@hogehoge:~#`
   
-・pythonを起動. 
->root@hogehoge:~# python
+・`root@hogehoge:~# python` pythonを起動. 
+
    
 ・pythonコマンドでTensolflowの動作確認.  
 ・
@@ -57,10 +57,12 @@ Docker
 >python classify_image.py --image_file ./share/1.jpg
   
 ### Dockerコマンド
->docker ps -a  
-  
-作成したコンテナ一覧を表示.  
-  
->docker rm $(docker ps -aq)  
-  
-作成したコンテナを全削除.  
+よく使うものを記載.
+
+|コマンド|内容|
+|---|---|
+|docker ps -a|作成したコンテナ一覧を表示|
+|docker rm $(docker ps -aq)|コンテナを全削除|
+|docker start [Container ID or Name]|指定したコンテナを起動|
+|docker stop $(docker ps -aq)|コンテナを全停止|
+|docker stop [Container ID or Name]|指定したコンテナを停止|
