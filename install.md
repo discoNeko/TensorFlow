@@ -61,6 +61,8 @@ Docker
 
 |コマンド|内容|
 |---|---|
+|docker run -it b.gcr.io/tensorflow/tensorflow:latest-devel|コンテナを起動|
+|docker run -p 8888:8888 -p 6006:6006 b.gcr.io/tensorflow/tensorflow|コンテナを起動（ポート指定）|
 |docker ps -a|作成したコンテナ一覧を表示|
 |docker rm $(docker ps -aq)|コンテナを全削除|
 |docker start [Container ID or Name]|指定したコンテナを起動|
