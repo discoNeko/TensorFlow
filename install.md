@@ -74,3 +74,8 @@ Docker
 ### アクセス
 Jupyter画面 [http://192.168.99.100:8888/](http://192.168.99.100:8888/)  
 Tensorboard [http://192.168.99.100:6006/](http://192.168.99.100:6006/)  
+  
+※Tensorboardは, Jupyterの右上から「Terminal」を開いて,  
+> \# tensorboard --logdir=log  
+  
+で起動する.
