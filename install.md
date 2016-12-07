@@ -70,3 +70,7 @@ Docker
 |docker stop [Container ID or Name]|指定したコンテナを停止|
 
 [Dockerコマンド一覧](http://docs.docker.jp/engine/reference/commandline/)
+
+### アクセス
+Jupyter画面 [http://192.168.99.100:8888/](http://192.168.99.100:8888/)  
+Tensorboard [http://192.168.99.100:6006/](http://192.168.99.100:6006/)  
