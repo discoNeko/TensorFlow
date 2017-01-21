@@ -63,11 +63,13 @@ Docker
 |---|---|
 |docker run -it b.gcr.io/tensorflow/tensorflow:latest-devel|コンテナを起動|
 |docker run -p 8888:8888 -p 6006:6006 b.gcr.io/tensorflow/tensorflow|コンテナを起動（ポート指定）|
+|docker run -v /c/Users/Docker_share:/notebooks/share -p 8888:8888 -p 6006:6006 b.gcr.io/tensorflow/tensorflow|フォルダ共有状態でコンテナ起動（ポート指定）|
 |docker ps -a|作成したコンテナ一覧を表示|
 |docker rm $(docker ps -aq)|コンテナを全削除|
-|docker start [Container ID or Name]|指定したコンテナを起動|
+|docker rm [Container ID or Name]|指定したコンテナを削除|
 |docker stop $(docker ps -aq)|コンテナを全停止|
 |docker stop [Container ID or Name]|指定したコンテナを停止|
+|docker start [Container ID or Name]|指定したコンテナを起動|
   
 オプション  
   
