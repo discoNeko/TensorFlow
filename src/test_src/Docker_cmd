@@ -1,0 +1,18 @@
+
+jupyter起動版（なぜか:latest-develを付けると動かない）
+docker run -p 8888:8888 -p 6006:6006 b.gcr.io/tensorflow/tensorflow
+
+imageNetを使うときにフォルダ下に共有フォルダを設置する
+docker run -v /c/Users/Docker_share:/tensorflow/tensorflow/models/image/imagenet/share/ -it b.gcr.io/tensorflow/tensorflow:latest-devel
+
+汎用的な共有フォルダの設置
+docker run -v /c/Users/Docker_share:/root/share/ -it b.gcr.io/tensorflow/tensorflow:latest-devel
+
+imageNetへのアクセス
+cd /tensorflow/tensorflow/models/image/imagenet
+
+imageNetの実行
+python classify_image.py
+
+imageNetの実行（引数あり）
+python classify_image.py --image_file ./share/1.jpg
