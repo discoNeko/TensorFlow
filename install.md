@@ -28,15 +28,13 @@ TensorBoardのポートについて説明がある(スライド:6,7).
 `root@hogehoge:~#`
   
 ・`root@hogehoge:~# python` pythonを起動. 
-
-   
+  
 ・pythonコマンドでTensolflowの動作確認.  
-・
 
 Docker
 --
 ### ホスト(Windows)とコンテナでファイルを共有する
-つまり画像認識のチュートリアルimageNet/classify_image.pyでパンダ以外の画像を指定したいとき.  
+画像認識のチュートリアルimageNet/classify_image.pyでパンダ以外の画像を指定したいときなど.  
   
 [[TensorFlow][Docker] TensorFlowをWindowsで動かす](http://scriptlife.hacca.jp/contents/programming/2016/08/11/post-1698/)より  
 >Windows側のファイルをそのまま使用したいときは、runのときに-vオプションを使います。
@@ -48,9 +46,10 @@ Docker
 例えば下記のように実行するとclassify_image.pyが実行できなくなるので注意.  
 >docker run -v /c/Users/share:/tensorflow/tensorflow/models/image/imagenet/ -it b.gcr.io/tensorflow/tensorflow:latest-devel
   
-これは「/tensorflow/tensorflow/models/image/imagenet/」が「/c/Users/share」として扱われ,   本来「/tensorflow/tensorflow/models/image/imagenet/」内にあるはずのclassify_image.pyが認識されなくなるため.  
+これは「/tensorflow/tensorflow/models/image/imagenet/」が「/c/Users/share」として扱われ,  
+「/tensorflow/tensorflow/models/image/imagenet/」内にあるclassify_image.pyが認識されなくなるため.  
   
-適当な共有用のフォルダを指定しておけば問題ない.  
+適当な共有用のフォルダを作って指定しておけば問題ない.  
 >docker run -v /c/Users/share:/tensorflow/tensorflow/models/image/imagenet/share/ -it b.gcr.io/tensorflow/tensorflow:latest-devel
   
 --image_fileのあとに相対パスで画像を指定する.
