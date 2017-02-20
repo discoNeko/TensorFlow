@@ -25,7 +25,7 @@ TensorFlow自体の簡単な解説+コード.
 入力データの取り込み方から出力までを具体例で解説.
 * [TensorFlowのPythonコードの初歩を噛み砕いてみる](http://qiita.com/To_Murakami/items/5984a4891597b17fc40e)  
 上の記事のソース解説.
-[畳み込みニューラルネットワークによるテキスト分類を TensorFlow で実装する](http://tkengo.github.io/blog/2016/03/14/text-classification-by-cnn/)  
+* [畳み込みニューラルネットワークによるテキスト分類を TensorFlow で実装する](http://tkengo.github.io/blog/2016/03/14/text-classification-by-cnn/)  
 比較的新しい記事(16/03). TensorFlowでの各層の実装についてソース付き解説.  
   
 
